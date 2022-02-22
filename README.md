@@ -2,3 +2,4 @@
 
 Website to learn coding with CSS, JS and JSX. Use of media queries, gradients, navbar and much more.
 
+

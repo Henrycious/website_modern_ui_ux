@@ -1,35 +1,27 @@
 import React from 'react';
 import people from '../../assets/people.png';
-import ai from '../../assets/ai.png';
+import ai from '../../assets/undraw_react.svg';
 import './header.css';
 
-const Header = () => {
-  return (
-    <div className="gpt3__header section__padding" id="home">
-      <div className="gpt3__header-content">
-        <h1 className="gradient__text">
-          Let's Build Something Amazing with OpenAI
-        </h1>
-        <p>
-          Yet bet any for travelling assistance indulgenve unemploxes the attachment.
-          Party we years to oder allow asked of anything.
-        </p>
-        <div className='gpt__header-content_input'>
-          <input type="email" placeholder="Your Email Adress">          </input>
-          <button type="button">Get Started!</button>
-        </div>
-        <div className='gpt3__header-content__people'>
-          <img src={people} alt='people'/>
-          <p>1600 people requested access a visit in the last 24 hours</p>
-        </div>
-        <div className='gpt3__header-image'>
-          <img src={ai} alt='ai'/>
-        </div>
+const Header = () => (
+  <div className="react__header section__padding" id="home">
+    <div className="react__header-content">
+      <h1 className="gradient__text">Let&apos;s Build Something amazing with ReactJS</h1>
+      <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+      <form action="#" className="react__header-content__input">
+        <input type="email" placeholder="Your Email Address" required />
+        <button type="submit">Get Started</button>
+      </form>
+      <div className="react__header-content__people">
+        <img src={people} />
+        <p>1,600 people requested access a visit in last 24 hours</p>
       </div>
     </div>
-  )
-};
 
-
+    <div className="react__header-image">
+      <img src={ai} />
+    </div>
+  </div>
+);
 
 export default Header;

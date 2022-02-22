@@ -1,4 +1,4 @@
-.gpt3__features-container__feature {
+.react__features-container__feature {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -7,23 +7,30 @@
 
     margin: 1rem;
 }
-
-.gpt3__features-container__feature-title {
+/** flex:1 means the following: 
+    flex-grow  : 1;    ➜ The div will grow in same proportion as the window-size       
+    flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+    flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%.*/
+.react__features-container__feature-title {
     flex: 1;
     max-width: 180px;
     margin-right: 2rem;
+   
 }
 
-.gpt3__features-container__feature-title h1 {
+.react__features-container__feature-title h1 {
     font-family: var(--font-family);
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.04em;
     color: #fff;
+    padding-bottom: 1rem;
 }
 
-.gpt3__features-container__feature-title div {
+.react__features-container__feature-title div {
     width: 38px;
     height: 3px;
     background: var(--gradient-bar);
@@ -31,13 +38,17 @@
     margin-bottom: 0.25rem;
 }
 
-.gpt3__features-container_feature-text {
+/** flex:2 -> element is twice the size (here: as the title) --- 
+    (flex:1 -> every element has same size) */
+.react__features-container__feature-text {
     flex: 2;
     max-width: 390px;
     display: flex;
+    text-align: start;
+    padding-left: 1rem;
 }
 
-.gpt3__features-container_feature-text p {
+.react__features-container__feature-text p {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
@@ -46,17 +57,17 @@
 }
 
 @media screen and (max-width: 550px) {
-    .gpt3__features-container__feature-title h1 {
+    .react__features-container__feature-title h1 {
         font-size: 14px;
         line-height: 22px;
     }
 
-    .gpt3__features-container_feature-text p {
+    .react__features-container__feature-text p {
         font-size: 12px;
         line-height: 20px;
     }
 
-    .gpt3__features-container__feature {
+    .react__features-container__feature {
         margin: 1rem 0;
     }
 }
